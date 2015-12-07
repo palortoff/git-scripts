@@ -6,4 +6,10 @@ if [ $# -lt 1 -o $# -gt 1 ]; then
     exit 1
 fi
 
+git log MERGE_HEAD -1 1> /dev/null 2> /dev/null
+if [[ $? != 0 ]]; then 
+    echo "MERGE_HEAD not found. use $(basename $0) while in merging state"
+    exit 1 
+fi
+
 git difftool `git merge-base HEAD MERGE_HEAD` HEAD $1
