@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+if [ $# -lt 1 -o $# -gt 1 ]; then
+    echo "Rationale : Show changes in file on local branch since last merge"
+    echo "Usage     : $(basename $0) <filename>"
+    exit 1
+fi
+
+git difftool `git merge-base HEAD MERGE_HEAD` HEAD $1
