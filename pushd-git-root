@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+pushd ./`git rev-parse --show-cdup`
