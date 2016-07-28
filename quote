@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+while read -t 10 pipe; do
+  if [ -n "$pipe" ]; then
+    echo \"$pipe\"
+  fi
+done
