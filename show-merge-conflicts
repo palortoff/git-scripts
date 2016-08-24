@@ -72,7 +72,7 @@ for f in $files; do
     LOCAL="/tmp/$f.LOCAL"
     BASE="/tmp/$f.BASE"
     REMOTE="/tmp/$f.REMOTE"
-    MERGED="/tmp/$1.MERGED"
+    MERGED="/tmp/$f.MERGED"
 
     # Silence the call to "touch" in "merge_cmd ()".
     BACKUP="/tmp/$1.BACKUP"
